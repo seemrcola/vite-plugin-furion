@@ -1,6 +1,6 @@
-### 玩具插件
+### furion
 
-### 用法
+### usage
 ```shell
 pnpm add vite-pligin-furion -D
 ```
@@ -15,6 +15,5 @@ plugins:[
 ]
 ```
 
-
-在执行pnpm dev --mode [staging] 时，插件会检查是否存在这个staging，如果不存在，则给予一个提示，不影响项目正常执行。  
-因为我有几次拼写错误的经历，就做了这个插件来提示自己。
+- pnpm dev --mode [staging] provides a warning when [staging] spelling is wrong
+- Find all the images and output a file named img.index.js
