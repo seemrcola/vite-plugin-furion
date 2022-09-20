@@ -1,9 +1,9 @@
 const colors = require('colors-console')
 const fg = require('fast-glob')
 
-exports.createFurionPlugin = function() {
+exports.createTipPlugin = function() {
   return {
-    // 插件名称
+    // 插件名称Plugin
     name: "vite-plugin-furion",
 
     // pre 会较于 post 先执行

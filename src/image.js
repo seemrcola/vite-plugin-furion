@@ -9,9 +9,9 @@ const filesMap = {}
 const fix1stWord = '_'
 const imgsInclude = ['jpg', 'png', 'jpeg', 'svg', 'webp', 'gif']
 
-export function vitePluginImages(options) {
+exports.createImagePlugin = function(options) {
   return {
-    name: 'vite-plugin-template',
+    name: 'vite-plugin-images',
     // pre 会较于 post 先执行
     enforce: 'pre', // post
     apply: 'serve', // apply 可以是一个函数
