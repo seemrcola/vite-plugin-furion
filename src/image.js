@@ -1,4 +1,4 @@
-const process = require('process');
+
 const path = require('path');
 const fs = require('fs')
 const chokidar = require('chokidar');
@@ -6,23 +6,14 @@ const chokidar = require('chokidar');
 const filesMap = {}
 
 /*options默认值*/
-const fix1stWord = '_'
-const imgsInclude = ['jpg', 'png', 'jpeg', 'svg', 'webp', 'gif']
+let fix1stWord = '_'
+let imgsInclude = ['jpg', 'png', 'jpeg', 'svg', 'webp', 'gif']
 
-exports.createImagePlugin = function(options) {
-  return {
-    name: 'vite-plugin-images',
-    // pre 会较于 post 先执行
-    enforce: 'pre', // post
-    apply: 'serve', // apply 可以是一个函数
-
-    config(config, { command }) {
-      fix1stWord = options.fix1stWord || fix1stWord
-      imgsInclude = options.imgsInclude || imgsInclude
-      /*开启文件监听*/
-      watchFile()
-    },
-  }
+exports.createImagePlugin = function(options = {}) {
+    fix1stWord = options.fix1stWord || fix1stWord
+    imgsInclude = options.imgsInclude || imgsInclude
+    /*开启文件监听*/
+    watchFile()
 }
 
 /*根据path获取文件后缀*/
