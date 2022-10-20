@@ -6,10 +6,10 @@ pnpm add vite-pligin-furion -D
 ```
 
 ```js
-import {vitePluginFurion} from 'vite-pligin-furion'
+import { createFurionPlugin } from 'vite-pligin-furion'
 ```
 
-```json
+```js
 plugins:[
   vitePluginFurion()
 ]
